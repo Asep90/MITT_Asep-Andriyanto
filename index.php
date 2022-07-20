@@ -15,7 +15,7 @@ include('koneksi.php');
 <table align="center" border="0"  width="325">
 	<tr>
 		<td colspan="2">
-			<img src="admin/gambar/login.jpg" height="200" width="325"></td>
+			<img src="admin/gambar/logo.jpg" height="200" width="325"></td>
 	</tr>
 		<tr>
 			<td width="66">Username</td><td width="312"><input type="text" class="input" size="37" name="user" /></td>
@@ -24,7 +24,7 @@ include('koneksi.php');
 				<td width="66">Password</td><td><input type="password" class="input" size="37" name="pass" /> </td>
 		</tr>
 			<tr>
-				<td><input type="submit" class="submitButton" value="Masuk"/></td>
+				<td><input type="submit" class="submitButton" value="Login"/></td>
 				<td> <input type="reset" class="submitButton" value="Hapus"/></td>
 			</tr>
 </table>

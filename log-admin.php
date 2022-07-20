@@ -15,7 +15,7 @@ if ($ketemu > 0){
 else{
 ?>
 	<script type="text/javascript">
-		alert("Password dan Username tidak Valid...!!!");
+		alert("Password dan Username Salah...!!!");
 	</script>
 <?php
 	echo "<meta http-equiv='refresh' content='0; url=index.php'>";
