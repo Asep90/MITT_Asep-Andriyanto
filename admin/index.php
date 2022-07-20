@@ -16,7 +16,7 @@ A:active {text-decoration: none}
 <table height="100px" width="1000px" border="0" align="center" cellpadding="0" cellspacing="0">
 <tr>
   <td>
-	<img src="gambar/welcome.jpg" height="200px" width="1000px"></td>
+	<img src="gambar/logo.jpg" height="200px" width="1000px"></td>
   </tr>
   <tr>
     <table bgcolor="#E4EAF2" height="40px" width="1000px" border="0" align="center" cellpadding="0" cellspacing="0">
