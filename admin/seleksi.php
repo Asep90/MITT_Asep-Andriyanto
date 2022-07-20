@@ -12,27 +12,27 @@ A:visited {text-decoration:none}
 A:active {text-decoration: none}
 -->
 </style>
-<title>PT Krisna Raja Sukses</title>
+<title>Asep Andriyanto</title>
 </head>
 
 <body>
 <table height="100px" width="1000px" border="0" align="center" cellpadding="0" cellspacing="0">
 <tr>
   <td>
-	<img src="gambar/welcome.jpg" height="200px" width="1000px"></td>
+	<img src="gambar/logo.jpg" height="200px" width="1000px"></td>
   </tr>
    <tr>
     <table bgcolor="#E4EAF2" height="40px" width="1000px" border="0" align="center" cellpadding="0" cellspacing="0">
      <tr>
      <td align="center" ><a href="../index.php"><font face="Britannic bold" size="4">Home
 	 </font></a></td>
-	 <td align="center"><a href="pelamar.php"><font face="Britannic bold" size="4">Input Pelamar
+	 <td align="center"><a href="pelamar.php"><font face="Britannic bold" size="4">User Profil
 	 </font></a></td>
-	 <td align="center"><a href="seleksi.php"><font face="Britannic bold" size="4">Form Hasil Seleksi
+	 <td align="center"><a href="seleksi.php"><font face="Britannic bold" size="4">User Skill
 	 </font></a></td>
-	 <td align="center"><a href="input.php"><font face="Britannic bold" size="4">Karyawan
+	 <td align="center"><a href="input.php"><font face="Britannic bold" size="4">Skill Level
 	 </font></a></td>
-	 <td align="center"><a href="laporan.php"><font face="Britannic bold" size="4">Laporan
+	 <td align="center"><a href="laporan.php"><font face="Britannic bold" size="4">Skill
 	 </font></a></td>
 	 <td align="center"><a href="../logout.php"><font face="Britannic bold" size="4">Logout
 	 <td align="center"><font face="Britannic bold" size="4"><?php 
@@ -46,85 +46,33 @@ echo date("d/m/Y");
   <table height="100px" width="1000px" border="0" align="center" bgcolor="#B9B9FF">
   <td width="252" rowspan="10"><img src="gambar/input.jpeg" width="252" height="350" /></td>
     
-<tr>
-  
-  <td width="113"  height="28">ID Daftar</td>
-    <td><select name="nama">
-        <option value="Kosong"> - </option>
-        <?php
-	  	// Menampilkan data kategori ke List/Menu
-	  	$bacaSql	= "SELECT * FROM pelamar ORDER BY id";
-		$bacaQry	= mysql_query($bacaSql, $koneksidb) or die ("Error Query".mysql_error()); 
-		while($bacaData = mysql_fetch_array($bacaQry)) {
-		  	// Status terpilih
-			if ($bacaData['id'] == $dataKategori) {
-				$pilih = " selected";
-			} else { $pilih=""; }
 
-			echo "<option value='$bacaData[nama]' $pilih> $bacaData[id] | $bacaData[nama]  </option>";
-		}
-	  ?>
-      </select>
-</tr>
 <tr>
- <td height="25">Nama Daftar</td>
+ <td height="25">User skill</td>
  <td>
   <label>
    <input name="namadaftar" type="text"  size="30" required="true" />
   </label></td>
 </tr>
 <tr>
- <td height="25">Daftar Posisi</td>
- <td>
-  <label>
-  <select name="posisi">
-    <option value="operator">Operator</option>
-        <option value="leader">Leader</option>
-        <option value="supervisor">Supervisor</option>
-        <option value="manager" selected="selected">Manager</option>
-   </select>
-  </label></td>
-</tr>
-<tr>
- <td height="25">Tanggal Seleksi</td>
- <td>
-  <label>
-   <input name="tglseleksi" type="date"  size="30" required="true" />
-  </label></td>
-</tr>
-<tr>
- <td height="25">Waktu Seleksi</td>
+ <td height="25">username</td>
  <td>
   <label>
    <input name="waktuseleksi" type="text"  size="11"  required="true"/>
   </label></td>
 </tr>
 <tr>
- <td height="25">Tes Tertulis</td>
+ <td height="25">Skil ID</td>
  <td>
   <label>
    <input name="tes" type="text"  size="30" required="true"/>
   </label></td>
 </tr>
 <tr>
- <td height="25">Tes Wawancara</td>
+ <td height="25">Skill level Id</td>
  <td>
   <label>
    <input name="wawancara" type="text"  size="30" required="true"/>
-  </label></td>
-</tr>
-<tr>
- <td height="25">Hasil</td>
- <td>
-  <label>
-   <input name="hasil" type="text"  size="11" required="true"/>
-  </label></td>
-</tr>
-<tr>
- <td height="86">Keterangan</td>
- <td>
-  <label>
-    <textarea name="ket" cols="40" rows="5" required="true"></textarea>
   </label></td>
 </tr>
 <tr>
@@ -141,8 +89,8 @@ echo date("d/m/Y");
 	<table height="20px" width="1000px" border="0" align="center" cellpadding="0" cellspacing="0">
 	<tr bgcolor="#E4EAF2">
 	<div>
-	<td width="750px"><font face="broadway" color="blue" size="2">&nbsp;CopyRight All Reserved © 2014</td>
-	<td width="200px"align="center"><font color="blue" size="4"><b>PT Krisna Raja Sukses</b></font></td></font>
+	<td width="750px"><font face="broadway" color="blue" size="2">&nbsp;CopyRight Asep Andriyanto © 2022</td>
+	<td width="200px"align="center"><font color="blue" size="4"><b>PT Tes Mandiri</b></font></td></font>
 	</div></tr>
   </tr></form>
 </body>
