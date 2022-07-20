@@ -26,13 +26,13 @@ A:active {text-decoration: none}
      <tr>
      <td align="center" ><a href="../index.php"><font face="Britannic bold" size="4">Home
 	 </font></a></td>
-	 <td align="center"><a href="pelamar.php"><font face="Britannic bold" size="4">Input Pelamar
+	 <td align="center"><a href="pelamar.php"><font face="Britannic bold" size="4">User Profil
 	 </font></a></td>
-	 <td align="center"><a href="seleksi.php"><font face="Britannic bold" size="4">Form Hasil Seleksi
+	 <td align="center"><a href="seleksi.php"><font face="Britannic bold" size="4">User Skill
 	 </font></a></td>
-	 <td align="center"><a href="input.php"><font face="Britannic bold" size="4">Karyawan
+	 <td align="center"><a href="input.php"><font face="Britannic bold" size="4">Skill Level
 	 </font></a></td>
-	 <td align="center"><a href="laporan.php"><font face="Britannic bold" size="4">Laporan
+	 <td align="center"><a href="laporan.php"><font face="Britannic bold" size="4">Skill
 	 </font></a></td>
 	 <td align="center"><a href="../logout.php"><font face="Britannic bold" size="4">Logout
 	 <td align="center"><font face="Britannic bold" size="4"><?php 
@@ -56,58 +56,18 @@ echo date("d/m/Y");
     
 <tr>
   
-  <td width="113"  height="28">Nama karyawan</td>
+  <td width="113"  height="28">Skill Level</td>
   <td width="257">
   <label>
     <input name="txt_nama" type="text" id="txt_nama" size="30" required="true"/>
   </label></td>
 </tr>
 <tr>
- <td height="25">Tanggal Lahir</td>
+ <td height="25">Skill level Name</td>
  <td>
   <label>
    <input name="txt_tgl" type="text" id="txt_tgl" size="30" required="true"/>
   </label></td>
-</tr>
-<tr>
- <td height="23">Jenis Kelamin</td>
- <td>
-   <input type="radio" name="rb_pilihan" id="radio" value="pria" />
-    Pria
-   <input type="radio" name="rb_pilihan" id="radio2" value="wanita" />
-    Wanita</td>
-</tr>
-<tr>
- <td height="86">Alamat</td>
- <td>
-  <label>
-    <textarea name="alamat" cols="40" rows="5" required="true"></textarea>
-  </label></td>
-</tr>
-<tr>
- <td height="25">No Telp</td>
- <td>
-  <label>
-   <input name="tlp" type="text" size="30" required="true" />
-  </label></td>
-</tr>
-<tr>
- <td height="28">Jabatan</td>
- <td>
-  <label>
-   <select name="lm_kode">
-    <option value="operator">Operator</option>
-        <option value="leader">Leader</option>
-        <option value="supervisor">Supervisor</option>
-        <option value="manager" selected="selected">Manager</option>
-   </select>
-  </label></td>
-</tr>
-
-
-<tr>
- <td height="23">Foto</td>
- <td><input type="file" name="foto" id="gambar" /></td>
 </tr>
 
 <tr>
