@@ -1,19 +1,20 @@
 -- phpMyAdmin SQL Dump
--- version 3.3.9
--- http://www.phpmyadmin.net
+-- version 4.6.5.2
+-- https://www.phpmyadmin.net/
 --
--- Host: localhost
--- Generation Time: Aug 27, 2016 at 10:01 AM
--- Server version: 5.5.8
--- PHP Version: 5.3.5
+-- Host: 127.0.0.1
+-- Generation Time: Jul 20, 2022 at 06:53 PM
+-- Server version: 10.1.21-MariaDB
+-- PHP Version: 5.6.30
 
-SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET time_zone = "+00:00";
 
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8 */;
+/*!40101 SET NAMES utf8mb4 */;
 
 --
 -- Database: `data`
@@ -25,7 +26,7 @@ SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
 -- Table structure for table `karyawan`
 --
 
-CREATE TABLE IF NOT EXISTS `karyawan` (
+CREATE TABLE `karyawan` (
   `nik` varchar(5) NOT NULL,
   `nama_karyawan` varchar(30) NOT NULL,
   `tgl_lahir` varchar(35) NOT NULL,
@@ -41,7 +42,8 @@ CREATE TABLE IF NOT EXISTS `karyawan` (
 --
 
 INSERT INTO `karyawan` (`nik`, `nama_karyawan`, `tgl_lahir`, `gender`, `alamat`, `no_tlp`, `jabatan`, `foto`) VALUES
-('00001', 'Sri astuti', '10 Tahun Sebelum Masehi', 'pria', 'Mesir', '123456789', 'manager', 'frank-lampard.jpg');
+('00001', 'Sri astuti', '10 Tahun Sebelum Masehi', 'pria', 'Mesir', '123456789', 'manager', 'frank-lampard.jpg'),
+('', '90%', 'lupi', '', '', '', '', '');
 
 -- --------------------------------------------------------
 
@@ -49,7 +51,7 @@ INSERT INTO `karyawan` (`nik`, `nama_karyawan`, `tgl_lahir`, `gender`, `alamat`,
 -- Table structure for table `pelamar`
 --
 
-CREATE TABLE IF NOT EXISTS `pelamar` (
+CREATE TABLE `pelamar` (
   `id` varchar(5) NOT NULL,
   `nama` varchar(35) NOT NULL,
   `tanggal_lahir` varchar(15) NOT NULL,
@@ -60,23 +62,14 @@ CREATE TABLE IF NOT EXISTS `pelamar` (
   `posisi` varchar(35) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
---
--- Dumping data for table `pelamar`
---
-
-INSERT INTO `pelamar` (`id`, `nama`, `tanggal_lahir`, `gender`, `alamat`, `no_tlp`, `pendidikan`, `posisi`) VALUES
-('00001', 'Rio', '01 Pebruari 198', 'pria', 'Jl.graha Indah No.18 Bekasi', '0821667889997', 'D3', 'Supervisor'),
-('00002', 'Danang', '19 Juni 1986', 'pria', 'Jl.kelapa gading, Jakarta', '081215254543', 'SMA', 'Operator'),
-('00003', 'Linda', '20 Oktober 1985', 'wanita', 'Jl. Raya Jatiasih, Bekasi', '081378654329', 'SMA', 'Operator');
-
 -- --------------------------------------------------------
 
 --
 -- Table structure for table `seleksi`
 --
 
-CREATE TABLE IF NOT EXISTS `seleksi` (
-  `id` int(10) NOT NULL AUTO_INCREMENT,
+CREATE TABLE `seleksi` (
+  `id` int(10) NOT NULL,
   `nama` varchar(35) NOT NULL,
   `daftar_posisi` varchar(25) NOT NULL,
   `tanggal_seleksi` varchar(25) NOT NULL,
@@ -84,18 +77,36 @@ CREATE TABLE IF NOT EXISTS `seleksi` (
   `tes_tulis` varchar(20) NOT NULL,
   `tes_wawancara` varchar(20) NOT NULL,
   `hasil` varchar(25) NOT NULL,
-  `ket` varchar(200) NOT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=4 ;
+  `ket` varchar(200) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `seleksi`
 --
 
 INSERT INTO `seleksi` (`id`, `nama`, `daftar_posisi`, `tanggal_seleksi`, `waktu_seleksi`, `tes_tulis`, `tes_wawancara`, `hasil`, `ket`) VALUES
-(1, 'Rio', 'Supervisor', '14 Maret 2014', '10.00-11.00', '80', '80', '160', 'LULUS'),
-(2, 'Danang', 'Operator', '15 Maret 2014', '11.00-12.00', '65', '65', '130', 'TIDAK LULUS'),
-(3, 'Linda', 'Operator', '16 Maret 2014', '10.00-11.00', '85', '85', '170', 'LULUS');
+(6, 'asip', '', '1970/01/01', 'adi', '909', '9090', '', '');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `skill`
+--
+
+CREATE TABLE `skill` (
+  `Skill_ID` int(10) NOT NULL,
+  `Username` varchar(40) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `skill_level`
+--
+
+CREATE TABLE `skill_level` (
+  `nama_user` varchar(50) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -103,12 +114,11 @@ INSERT INTO `seleksi` (`id`, `nama`, `daftar_posisi`, `tanggal_seleksi`, `waktu_
 -- Table structure for table `tbl_user`
 --
 
-CREATE TABLE IF NOT EXISTS `tbl_user` (
-  `id_user` int(3) NOT NULL AUTO_INCREMENT,
+CREATE TABLE `tbl_user` (
+  `id_user` int(3) NOT NULL,
   `user` varchar(20) NOT NULL,
-  `pass` char(40) NOT NULL,
-  PRIMARY KEY (`id_user`)
-) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=2 ;
+  `pass` char(40) NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `tbl_user`
@@ -116,3 +126,57 @@ CREATE TABLE IF NOT EXISTS `tbl_user` (
 
 INSERT INTO `tbl_user` (`id_user`, `user`, `pass`) VALUES
 (1, 'admin', '21232f297a57a5a743894a0e4a801fc3');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `user_profil`
+--
+
+CREATE TABLE `user_profil` (
+  `user_profil` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `user_skill`
+--
+
+CREATE TABLE `user_skill` (
+  `Skill_Id` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Indexes for dumped tables
+--
+
+--
+-- Indexes for table `seleksi`
+--
+ALTER TABLE `seleksi`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `tbl_user`
+--
+ALTER TABLE `tbl_user`
+  ADD PRIMARY KEY (`id_user`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `seleksi`
+--
+ALTER TABLE `seleksi`
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+--
+-- AUTO_INCREMENT for table `tbl_user`
+--
+ALTER TABLE `tbl_user`
+  MODIFY `id_user` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
