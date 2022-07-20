@@ -9,27 +9,27 @@ A:visited {text-decoration:none}
 A:active {text-decoration: none}
 -->
 </style>
-<title>PT Krisna Raja Sukses</title>
+<title>Mandiri</title>
 
 </head>
 <body>
 <table height="100px" width="1000px" border="0" align="center" cellpadding="0" cellspacing="0">
 <tr>
   <td>
-	<img src="gambar/welcome.jpg" height="200px" width="1000px"></td>
+	<img src="gambar/logo.jpg" height="200px" width="1000px"></td>
   </tr>
    <tr>
     <table bgcolor="#E4EAF2" height="40px" width="1000px" border="0" align="center" cellpadding="0" cellspacing="0">
      <tr>
      <td align="center" ><a href="../index.php"><font face="Britannic bold" size="4">Home
 	 </font></a></td>
-	 <td align="center"><a href="pelamar.php"><font face="Britannic bold" size="4">Input Pelamar
+	 <td align="center"><a href="pelamar.php"><font face="Britannic bold" size="4">User Profil
 	 </font></a></td>
-	 <td align="center"><a href="seleksi.php"><font face="Britannic bold" size="4">Form Hasil Seleksi
+	 <td align="center"><a href="seleksi.php"><font face="Britannic bold" size="4">User Skill
 	 </font></a></td>
-	 <td align="center"><a href="input.php"><font face="Britannic bold" size="4">Karyawan
+	 <td align="center"><a href="input.php"><font face="Britannic bold" size="4">Skill Level
 	 </font></a></td>
-	 <td align="center"><a href="laporan.php"><font face="Britannic bold" size="4">Laporan
+	 <td align="center"><a href="laporan.php"><font face="Britannic bold" size="4">Level Skill
 	 </font></a></td>
 	 <td align="center"><a href="../logout.php"><font face="Britannic bold" size="4">Logout
 	 <td align="center"><font face="Britannic bold" size="4"><?php 
@@ -48,15 +48,10 @@ echo date("d/m/Y");
  
  <tr>
   <td width="50"><div align="center"><strong>ID Daftar<strong></div></td>
-  <td width="100"><div align="center"><strong>Nama Daftar</strong></div></td>
-  <td width="100"><div align="center"><strong>Daftar Posisi</strong></div></td>
-  <td width="50"><div align="center"><strong>Tanggal Seleksi</strong></div>
-    <div align="left"></div></td>
-  <td width="50"><div align="center"><strong>Waktu Seleksi</strong></div></td>
-  <td width="80"><div align="center"><strong>Tes Tertulis</strong></div></td>
-  <td width="80"><div align="center"><strong>Tes Wawancara</strong></div></td>
-  <td width="80"><div align="center"><strong>Hasil</strong></div></td>
-  <td width="80"><div align="center"><strong>Keterangan</strong></div></td>
+  <td width="100"><div align="center"><strong>User Nama</strong></div></td>
+  <td width="50"><div align="center"><strong>User Skill</strong></div></td>
+  <td width="80"><div align="center"><strong>Skill </strong></div></td>
+  <td width="80"><div align="center"><strong>Skill Level</strong></div></td>
   <td width="150"><div align="center"><strong> Aksi </strong></div></td>
  </tr>
     
@@ -70,13 +65,10 @@ $nomor++;
 echo "<tr>
   <td>$nomor</td>
   <td>$sql[nama]</td>
-  <td>$sql[daftar_posisi]</td>
-  <td>$sql[tanggal_seleksi]</td>
   <td>$sql[waktu_seleksi]</td>
    <td>$sql[tes_tulis]</td>
     <td>$sql[tes_wawancara]</td>
-  <td>$sql[hasil]</td>
-   <td>$sql[ket]</td>
+  
 	
 <td align='center'><a href='javascript:if(confirm(\"Apakah Anda Ingin Menghapus Data ini...\")){ window.location=\"hapusseleksi.php?id=$sql[id]\"; }'>HAPUS</a> </td>
 </tr>";
