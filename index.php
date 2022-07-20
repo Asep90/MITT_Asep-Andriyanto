@@ -18,7 +18,7 @@ include('koneksi.php');
 			<img src="admin/gambar/logo.jpg" height="200" width="325"></td>
 	</tr>
 		<tr>
-			<td width="66">Username</td><td width="312"><input type="text" class="input" size="37" name="user" /></td>
+			<td width="66">Usernama</td><td width="312"><input type="text" class="input" size="37" name="user" /></td>
 		</tr>
 			<tr>
 				<td width="66">Password</td><td><input type="password" class="input" size="37" name="pass" /> </td>
