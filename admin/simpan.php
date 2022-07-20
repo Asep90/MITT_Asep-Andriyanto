@@ -1,3 +1,4 @@
+<title>mandiri</title>
 <?php
 include "koneksi.php";
  $nik=$_POST['txt_nik'];
