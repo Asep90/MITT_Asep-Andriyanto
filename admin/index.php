@@ -9,7 +9,7 @@ A:visited {text-decoration:none}
 A:active {text-decoration: none}
 -->
 </style>
-<title>PT Krisna Raja Sukses</title>
+<title>Asep Andriyanto</title>
 </head>
 <body>
 <form>
@@ -23,13 +23,13 @@ A:active {text-decoration: none}
      <tr>
      <td align="center" ><a href="../index.php"><font face="Britannic bold" size="4">Home
 	 </font></a></td>
-	 <td align="center"><a href="pelamar.php"><font face="Britannic bold" size="4">Input Pelamar
+	 <td align="center"><a href="pelamar.php"><font face="Britannic bold" size="4">User Profil
 	 </font></a></td>
-	 <td align="center"><a href="seleksi.php"><font face="Britannic bold" size="4">Form Hasil Seleksi
+	 <td align="center"><a href="seleksi.php"><font face="Britannic bold" size="4">User Skill
 	 </font></a></td>
-	 <td align="center"><a href="input.php"><font face="Britannic bold" size="4">Karyawan
+	 <td align="center"><a href="input.php"><font face="Britannic bold" size="4">Skil Level
 	 </font></a></td>
-	 <td align="center"><a href="laporan.php"><font face="Britannic bold" size="4">Laporan
+	 <td align="center"><a href="laporan.php"><font face="Britannic bold" size="4">Skill
 	 </font></a></td>
 	 <td align="center"><a href="../logout.php"><font face="Britannic bold" size="4">Logout
 	 <td align="center"><font face="Britannic bold" size="4"><?php 
@@ -45,8 +45,8 @@ echo date("d/m/Y");
 	<table height="20px" width="1000px" border="0" align="center" cellpadding="0" cellspacing="0">
 	<tr bgcolor="#E4EAF2">
 	<div>
-	<td width="750px"><font face="broadway" color="blue" size="2">&nbsp;CopyRight All Reserved © 2014</td>
-	<td width="200px"align="center"><font color="blue" size="4"><b>PT Krisna Raja Sukses</b></font></td></font>
+	<td width="750px"><font face="broadway" color="blue" size="2">&nbsp;CopyRight Asep Andriyanto © 2022</td>
+	<td width="200px"align="center"><font color="blue" size="4"><b>ASEP ANDRIYANTO</b></font></td></font>
 	</div></tr>
 </table>
 </body>
