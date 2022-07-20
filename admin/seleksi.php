@@ -51,7 +51,7 @@ echo date("d/m/Y");
  <td height="25">User skill</td>
  <td>
   <label>
-   <input name="namadaftar" type="text"  size="30" required="true" />
+   <input name="nama" type="text"  size="30" required="true" />
   </label></td>
 </tr>
 <tr>

@@ -48,8 +48,8 @@ echo date("d/m/Y");
  
  <tr>
   <td width="50"><div align="center"><strong>ID Daftar<strong></div></td>
-  <td width="100"><div align="center"><strong>User Nama</strong></div></td>
-  <td width="50"><div align="center"><strong>User Skill</strong></div></td>
+  <td width="100"><div align="center"><strong>User Skil</strong></div></td>
+  <td width="50"><div align="center"><strong>User Name</strong></div></td>
   <td width="80"><div align="center"><strong>Skill </strong></div></td>
   <td width="80"><div align="center"><strong>Skill Level</strong></div></td>
   <td width="150"><div align="center"><strong> Aksi </strong></div></td>
