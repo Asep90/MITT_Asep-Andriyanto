@@ -9,27 +9,27 @@ A:visited {text-decoration:none}
 A:active {text-decoration: none}
 -->
 </style>
-<title>PT Krisna Raja Sukses</title>
+<title>Asep Andriyanto</title>
 
 </head>
 <body>
 <table height="100px" width="1000px" border="0" align="center" cellpadding="0" cellspacing="0">
 <tr>
   <td>
-	<img src="gambar/welcome.jpg" height="200px" width="1000px"></td>
+	<img src="gambar/logo.jpg" height="200px" width="1000px"></td>
   </tr>
    <tr>
     <table bgcolor="#E4EAF2" height="40px" width="1000px" border="0" align="center" cellpadding="0" cellspacing="0">
      <tr>
      <td align="center" ><a href="../index.php"><font face="Britannic bold" size="4">Home
 	 </font></a></td>
-	 <td align="center"><a href="pelamar.php"><font face="Britannic bold" size="4">Input Pelamar
+	 <td align="center"><a href="pelamar.php"><font face="Britannic bold" size="4">User Profil Name
 	 </font></a></td>
-	 <td align="center"><a href="seleksi.php"><font face="Britannic bold" size="4">Form Hasil Seleksi
+	 <td align="center"><a href="seleksi.php"><font face="Britannic bold" size="4">User SKill
 	 </font></a></td>
-	 <td align="center"><a href="input.php"><font face="Britannic bold" size="4">Karyawan
+	 <td align="center"><a href="input.php"><font face="Britannic bold" size="4">Skill Level
 	 </font></a></td>
-	 <td align="center"><a href="laporan.php"><font face="Britannic bold" size="4">Laporan
+	 <td align="center"><a href="laporan.php"><font face="Britannic bold" size="4">Skill
 	 </font></a></td>
 	 <td align="center"><a href="../logout.php"><font face="Britannic bold" size="4">Logout
 	 <td align="center"><font face="Britannic bold" size="4"><?php 
@@ -48,15 +48,8 @@ echo date("d/m/Y");
  
  <tr>
   <td width="29"><div align="center"><strong>No</strong></div></td>
-  <td width="93"><div align="center"><strong>Nik</strong></div></td>
-  <td width="146"><div align="center"><strong>Nama Karyawan<strong></div></td>
-  <td width="81"><div align="center"><strong>Tanggal Lahir</strong></div></td>
-  <td width="124"><div align="center"><strong>Jenis kelamin</strong></div></td>
-   <td width="170"><div align="center"><strong>Alamat</strong></div><div align="left"></div></td>
-   <td width="135"><div align="center"><strong>No Tlp</strong></div></td>
-   <td width="135"><div align="center"><strong>Jabatan</strong></div></td>
-  <td width="135"><div align="center"><strong>Foto</strong></div></td>
-  <td width="138"><div align="center"><strong>Aksi</strong></div></td>
+  <td width="138"><div align="center"><strong>Skill level Name</strong></div></td>
+  <td width="146"><div align="center"><strong> Skill Level ID<strong></div></td>
  </tr>
     
  
@@ -69,14 +62,8 @@ $nomor++;
 
 echo "<tr>
   <td>$nomor</td>
-   <td>$sql[nik]</td>
-  <td>$sql[nama_karyawan]</td>
   <td>$sql[tgl_lahir]</td>
-  <td>$sql[gender]</td>
-  <td>$sql[alamat]</td>
-  <td>$sql[no_tlp]</td>
-  <td>$sql[jabatan]</td>
-  <td><img src='gambar/$sql[foto]' width='150' height='115' /></td>
+  <td>$sql[nama_karyawan]</td>
 	
 <td align='center'><a href='javascript:if(confirm(\"Apakah Anda Ingin Menghapus Data ini...\")){ window.location=\"hapus.php?nik=$sql[nik]\"; }'>HAPUS</a></td>
 </tr>";
