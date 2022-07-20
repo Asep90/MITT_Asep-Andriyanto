@@ -12,14 +12,14 @@ A:visited {text-decoration:none}
 A:active {text-decoration: none}
 -->
 </style>
-<title>PT Krisna Raja Sukses</title>
+<title>Asep Andriyanto</title>
 </head>
 
 <body>
 <table height="100px" width="1000px" border="0" align="center" cellpadding="0" cellspacing="0">
 <tr>
   <td>
-	<img src="gambar/welcome.jpg" height="200px" width="1000px"></td>
+	<img src="gambar/logo.jpg" height="200px" width="1000px"></td>
   </tr>
    <tr>
     <table bgcolor="#E4EAF2" height="40px" width="1000px" border="0" align="center" cellpadding="0" cellspacing="0">
@@ -46,29 +46,33 @@ echo date("d/m/Y");
 <form id="form1" name="form1" enctype="multipart/form-data" method="post" action="simpan.php">
   <table height="100px" width="1000px" border="0" align="center" bgcolor="#B9B9FF">
   <td width="252" rowspan="10"><img src="gambar/input.jpeg" width="252" height="350" /></td>
-<tr>
- <td height="25">NIK</td>
- <td>
-  <label>
-   <input name="txt_nik" value="<?php echo $noTransaksi; ?>" size="23" maxlength="20" readonly="readonly" required="true"/>
-  </label></td>
-</tr>
-    
-<tr>
+  <tr>
   
   <td width="113"  height="28">Skill Level</td>
-  <td width="257">
-  <label>
-    <input name="txt_nama" type="text" id="txt_nama" size="30" required="true"/>
-  </label></td>
+  <td><select name="nama">
+        <option value="Kosong"> - </option>
+        <?php
+	  	// Menampilkan data kategori ke List/Menu
+	  	$bacaSql	= "SELECT * FROM seleksi ORDER BY id";
+		$bacaQry	= mysql_query($bacaSql, $koneksidb) or die ("Error Query".mysql_error()); 
+		while($bacaData = mysql_fetch_array($bacaQry)) {
+		  	// Status terpilih
+			if ($bacaData['id'] == $dataKategori) {
+				$pilih = " selected";
+			} else { $pilih=""; }
+
+			echo "<option value='$bacaData[nama]' $pilih> $bacaData[tes_wawancara]  </option>";
+		}
+	  ?>
+      </select>
 </tr>
-<tr>
+  <tr>
  <td height="25">Skill level Name</td>
  <td>
   <label>
    <input name="txt_tgl" type="text" id="txt_tgl" size="30" required="true"/>
   </label></td>
-</tr>
+</tr>  
 
 <tr>
  <td height="41" colspan="2">
@@ -84,8 +88,8 @@ echo date("d/m/Y");
 	<table height="20px" width="1000px" border="0" align="center" cellpadding="0" cellspacing="0">
 	<tr bgcolor="#E4EAF2">
 	<div>
-	<td width="750px"><font face="broadway" color="blue" size="2">&nbsp;CopyRight All Reserved © 2014</td>
-	<td width="200px"align="center"><font color="blue" size="4"><b>PT Krisna Raja Sukses</b></font></td></font>
+	<td width="750px"><font face="broadway" color="blue" size="2">&nbsp;CopyRight Asep Andriyanto © 2022</td>
+	<td width="200px"align="center"><font color="blue" size="4"><b>PT Asep Andriyanto</b></font></td></font>
 	</div></tr>
   </tr></form>
 </body>
